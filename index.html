@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار: آثار استخدام الإنترنت على المؤسسات</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <!-- شاشة البداية -->
+        <div id="start-screen" class="screen active">
+            <div class="start-card">
+                <div class="icon-circle">📊</div>
+                <h1>اختبار تفاعلي</h1>
+                <h2>آثار استخدام وتصفح المجتمعات عبر الإنترنت على المؤسسات</h2>
+                <p class="subtitle">إعداد: عبدالله حاكم العمري & أوس علي العمري</p>
+                
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-num">30</span>
+                        <span class="info-label">سؤال</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-num">4</span>
+                        <span class="info-label">خيارات</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-num">100</span>
+                        <span class="info-label">درجة</span>
+                    </div>
+                </div>
+
+                <button id="start-btn" class="btn-primary">ابدأ الاختبار 🚀</button>
+            </div>
+        </div>
+
+        <!-- شاشة الاختبار -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-info">
+                    <span id="question-counter">السؤال 1 من 30</span>
+                    <span id="score-display">النقاط: 0</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3 id="question-text"></h3>
+                <div id="options-container" class="options-container"></div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="btn-primary" disabled>التالي ←</button>
+            </div>
+        </div>
+
+        <!-- شاشة النتائج -->
+        <div id="result-screen" class="screen">
+            <div class="result-card">
+                <div id="result-icon" class="result-icon">🎉</div>
+                <h1 id="result-title">أحسنت!</h1>
+                <p id="result-message"></p>
+                
+                <div class="score-circle">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" class="score-bg"></circle>
+                        <circle id="score-progress" cx="60" cy="60" r="54" class="score-fill"></circle>
+                    </svg>
+                    <div class="score-text">
+                        <span id="final-score">0</span>
+                        <small>من 30</small>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat correct">
+                        <span class="stat-num" id="correct-count">0</span>
+                        <span class="stat-label">صحيحة ✓</span>
+                    </div>
+                    <div class="stat wrong">
+                        <span class="stat-num" id="wrong-count">0</span>
+                        <span class="stat-label">خاطئة ✗</span>
+                    </div>
+                    <div class="stat percent">
+                        <span class="stat-num" id="percentage">0%</span>
+                        <span class="stat-label">النسبة</span>
+                    </div>
+                </div>
+
+                <div class="result-buttons">
+                    <button id="restart-btn" class="btn-primary">إعادة الاختبار 🔄</button>
+                    <button id="review-btn" class="btn-secondary">مراجعة الإجابات 📝</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- شاشة المراجعة -->
+        <div id="review-screen" class="screen">
+            <div class="review-header">
+                <h1>مراجعة الإجابات</h1>
+                <button id="back-to-result" class="btn-secondary">← رجوع للنتيجة</button>
+            </div>
+            <div id="review-container" class="review-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
